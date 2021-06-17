@@ -1,0 +1,47 @@
+{% extends 'basic.html' %}
+
+{% block body %}
+
+{% load static %}
+ <div class="small-container">
+        <div class="row row-2">
+            <h2 class="title">All Products</h2>
+            <select>
+                <option>Default Shorting</option>
+                <option>Short by price</option>
+                <option>Short by rating</option>
+                <option>Short by sale</option>
+            </select>
+        </div>
+
+        <div class="row">
+
+        {%for i in prods %}
+            <div class="col-4">
+                <div class="img-box">
+                    <img src='/media/{{i.image}}' alt="">
+                </div>    
+                 <a href="{% url 'productdetail' product.id %}"> <h4>{{i.product_name}}</h4> </a>
+                 <!--    -->
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>Rs 450.00</p>
+            </div>
+
+        {% endfor %} 
+
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>       
+
+    {% endblock %}
