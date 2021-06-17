@@ -24,6 +24,6 @@ urlpatterns = [
 
 
     #for product only
-    #path('products/', ProductList.as_view()),
-    path('productdd/<int:id>/', views.productView, name='productdetail'),
+    path('products/', ProductList.as_view()),
+    #path('productdd/<int:id>/', views.productView, name='productdetail'),
 ]

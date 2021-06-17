@@ -64,7 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'cart.context_processor.cart_total_amount'
+                'cart.context_processor.cart_total_amount'
             ],
         },
     },
@@ -136,4 +136,4 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#CART_SESSION_ID = 'cart'
+CART_SESSION_ID = 'cart'
